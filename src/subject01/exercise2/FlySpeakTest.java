@@ -1,9 +1,9 @@
-package subject02;
+package subject01.exercise2;
 
 class FlySpeakTest {
     public static void main(String[] args) {
 		var f = new Flyable[]{new Bird(), new Plane(), new UFO(), new Virus()};
-		var s = new Speakable[]{new Bird(), new Plane(), new UFO(), new Virus()};
+		var s = new Speakable[]{new Bird()};
 
 		System.out.println(shortest(f));
 		System.out.println(loudest(s));

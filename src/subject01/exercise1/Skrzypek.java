@@ -1,4 +1,4 @@
-package subject01;
+package subject01.exercise1;
 
 class Skrzypek extends Muzyk {
     public Skrzypek(String imie, double czas) {

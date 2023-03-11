@@ -1,6 +1,6 @@
-package subject02;
+package subject01.exercise2;
 
-class UFO implements Flyable, Speakable {
+class UFO implements Flyable {
     @Override
     public String drive() {
         return "Unknown";
@@ -8,11 +8,6 @@ class UFO implements Flyable, Speakable {
 
     @Override
     public double distance() {
-        return 999999999;
-    }
-
-    @Override
-    public String speak() {
-        return "Ziuuuuuuuuuuuum";
+        return Integer.MAX_VALUE;
     }
 }

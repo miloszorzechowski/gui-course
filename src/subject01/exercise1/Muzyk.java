@@ -1,4 +1,4 @@
-package subject01;
+package subject01.exercise1;
 
 abstract class Muzyk {
     private String imie;
@@ -29,17 +29,16 @@ abstract class Muzyk {
                 '}';
     }
 
-    public static Muzyk maxHonorarium(Muzyk[] muzycy)
-    {
-        double maxHonorarium = 0;
-        Muzyk najdrozszyMuzyk = null;
+    public static Muzyk maxHonorarium(Muzyk[] muzycy) {
+        var maxHonorarium = muzycy[0].czas * muzycy[0].stawka();
+        var najdrozszyMuzyk = muzycy[0];
 
-        for (Muzyk muzyk : muzycy) {
-            double honorarium = muzyk.czas * muzyk.stawka();
+        for (var index = 1; index < muzycy.length; index++) {
+            var honorarium = muzycy[index].czas * muzycy[index].stawka();
 
             if (honorarium > maxHonorarium) {
                 maxHonorarium = honorarium;
-                najdrozszyMuzyk = muzyk;
+                najdrozszyMuzyk = muzycy[index];
             }
         }
 

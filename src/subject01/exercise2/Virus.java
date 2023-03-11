@@ -1,18 +1,13 @@
-package subject02;
+package subject01.exercise2;
 
-class Virus implements Flyable, Speakable {
+class Virus implements Flyable {
     @Override
     public String drive() {
-        return "Engine";
+        return "Air";
     }
 
     @Override
     public double distance() {
-        return 3000;
-    }
-
-    @Override
-    public String speak() {
-        return "Brrrr";
+        return 0.182;
     }
 }

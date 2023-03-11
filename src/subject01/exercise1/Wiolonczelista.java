@@ -1,4 +1,4 @@
-package subject01;
+package subject01.exercise1;
 
 class Wiolonczelista extends Muzyk {
     public Wiolonczelista(String imie, double czas) {

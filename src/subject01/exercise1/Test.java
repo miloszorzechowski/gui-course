@@ -1,4 +1,4 @@
-package subject01;
+package subject01.exercise1;
 
 public class Test {
 
