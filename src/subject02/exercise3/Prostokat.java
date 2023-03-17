@@ -1,57 +1,51 @@
-package subject02.exercise1;
-
-import subject02.exercise1.Figura;
+package subject02.exercise3;
 
 public class Prostokat extends Figura {
-    private int szerokosc;
-    private int wysokosc;
+    private final int width;
+    private final int height;
 
-    public Prostokat(int x, int y, int szerokosc, int wysokosc) {
+    public Prostokat(int x, int y, int width, int height) {
         super(x, y);
-        this.szerokosc = szerokosc;
-        this.wysokosc = wysokosc;
+        this.width = width;
+        this.height = height;
     }
 
-    protected int szerokosc() {
-        return szerokosc;
+    protected int getWidth() {
+        return width;
     }
 
-    protected int wysokosc() {
-        return wysokosc;
+    protected int getHeight() {
+        return height;
     }
 
     @Override
     public String nazwa() {
-        return "Prostokąt";
+        return "Rectangle";
     }
 
     @Override
     public void pozycja(int x, int y) {
-        String notification = String.format("Punkt (%d, %d) znajduje się result prostokąta", x, y);
-
-        if ((x >= getX() & x <= getX() + szerokosc) & (y <= getY() & y >= y - wysokosc)) {
-            notification = notification.replaceFirst("result", "wewnątrz");
+        if (x >= getX() & x <= getX() + width & y <= getY() & y >= y - height) {
+            System.out.printf("Punkt (%d, %d) znajduje się wewnątrz prostokąta", x, y);
         } else {
-            notification = notification.replaceFirst("result", "na zewnątrz");
+            System.out.printf("Punkt (%d, %d) znajduje się na zewnątrz prostokąta", x, y);
         }
-
-        System.out.println(notification);
     }
 
     @Override
     public String toString() {
         return "Prostokąt" + "\n" +
                 "Lewy górny - (" + getX() + ',' + getY() + ")" + "\n" +
-                "Szerokość: " + szerokosc + ", Wysokość: " + wysokosc + "\n";
+                "Szerokość: " + width + ", Wysokość: " + height + "\n";
     }
 
     @Override
-    public double pole() {
-        return szerokosc * wysokosc;
+    public double getArea() {
+        return width * height;
     }
 
     @Override
-    public double obwod() {
-        return 2 * szerokosc + 2 * wysokosc;
+    public double getCircumference() {
+        return 2 * width + 2 * height;
     }
 }

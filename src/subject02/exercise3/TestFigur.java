@@ -1,4 +1,4 @@
-package subject02.exercise1;
+package subject02.exercise3;
 
 public class TestFigur {
 

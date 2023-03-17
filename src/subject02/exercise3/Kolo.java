@@ -1,48 +1,41 @@
-package subject02.exercise1;
-
-import subject02.exercise1.Figura;
+package subject02.exercise3;
 
 public class Kolo extends Figura {
-    private int promien;
+    private final int radius;
 
-    public Kolo(int x, int y, int promien) {
+    public Kolo(int x, int y, int radius) {
         super(x, y);
-        this.promien = promien;
+        this.radius = radius;
     }
 
     @Override
     public String nazwa() {
-        return "Koło";
+        return "Circle";
     }
 
     @Override
     public void pozycja(int x, int y) {
-        double distance = Math.sqrt(Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2));
-        String notification = String.format("Punkt (%d, %d) znajduje się result koła", x, y);
-
-        if (distance <= promien) {
-            notification = notification.replaceFirst("result", "wewnątrz");
+        if (Math.sqrt(Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2)) <= radius) {
+            System.out.printf("Punkt (%d, %d) znajduje się wewnątrz koła%n", x, y);
         } else {
-            notification = notification.replaceFirst("result", "na zewnątrz");
+            System.out.printf("Punkt (%d, %d) znajduje się na zewnątrz koła%n", x, y);
         }
-
-        System.out.println(notification + "\n");
     }
 
     @Override
     public String toString() {
         return "Koło" + "\n" +
                 "Środek - (" + getX() + ',' + getY() + ")" + "\n" +
-                "Promień - " + promien + "\n";
+                "Promień - " + radius + "\n";
     }
 
     @Override
-    public double pole() {
-        return Math.pow(Math.PI * promien, 2);
+    public double getArea() {
+        return Math.pow(Math.PI * radius, 2);
     }
 
     @Override
-    public double obwod() {
-        return 2 * Math.PI * promien;
+    public double getCircumference() {
+        return 2 * Math.PI * radius;
     }
 }

@@ -1,6 +1,6 @@
-package subject02.exercise1;
+package subject02.exercise3;
 
-import subject02.exercise2.Obliczenie;
+import subject02.exercise4.Obliczenie;
 
 public abstract class Figura implements Obliczenie {
     private int x;
@@ -11,7 +11,7 @@ public abstract class Figura implements Obliczenie {
         this.y = y;
     }
 
-    protected abstract String nazwa();
+    public abstract String nazwa();
 
     protected abstract void pozycja(int x, int y);
 

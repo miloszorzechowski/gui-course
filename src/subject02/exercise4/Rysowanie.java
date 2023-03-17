@@ -1,4 +1,4 @@
-package subject02.exercise2;
+package subject02.exercise4;
 
 interface Rysowanie {
     void rysuj();

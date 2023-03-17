@@ -1,6 +1,6 @@
-package subject02.exercise2;
+package subject02.exercise4;
 
 public interface Obliczenie {
-    double pole();
-    double obwod();
+    double getArea();
+    double getCircumference();
 }

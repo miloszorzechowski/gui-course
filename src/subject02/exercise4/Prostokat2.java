@@ -1,19 +1,19 @@
-package subject02.exercise2;
+package subject02.exercise4;
 
-import subject02.exercise1.Prostokat;
+import subject02.exercise3.Prostokat;
 
 class Prostokat2 extends Prostokat implements Rysowanie {
-    private char symbol;
+    private final char symbol;
 
-    public Prostokat2(int x, int y, int szerokosc, int wysokosc, char symbol) {
-        super(x, y, szerokosc, wysokosc);
+    Prostokat2(int x, int y, int width, int height, char symbol) {
+        super(x, y, width, height);
         this.symbol = symbol;
     }
 
     @Override
     public void rysuj() {
-        for (int row = 0; row < wysokosc(); row++) {
-            for (int column = 0; column < szerokosc(); column++) {
+        for (var row = 0; row < getHeight(); row++) {
+            for (var column = 0; column < getWidth(); column++) {
                 System.out.print(symbol);
             }
 
